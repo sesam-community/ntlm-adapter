@@ -9,8 +9,8 @@ from service import logger
 
 rootlogger= logger.Logger()
 url=os.environ.get('url')
-user=os.environ.get('user')
-password=os.environ.get('pass')
+user=os.environ.get('username')
+password=os.environ.get('password')
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])

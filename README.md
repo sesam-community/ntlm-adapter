@@ -10,9 +10,9 @@ A small microservice to get data from NTLM source.
   "type": "system:microservice",
   "docker": {
     "environment": {
-      "pass": "thePassword",
       "url": "theURl",
-      "user": "DOMAIN\\username"
+      "username": "DOMAIN\\username",
+      "password": "thePassword"
     },
     "image": "sesambuild/ntlm-adapter:latest",
     "port": 5001
