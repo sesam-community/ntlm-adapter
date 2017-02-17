@@ -1,13 +1,17 @@
 sudo: required
 
+language: python
+python:
+  -  "3.5"
+
 services:
   - docker
 
-before_install:
-  - docker build -t sesamcommunity/ntlm-adapter .
+script: pytest
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker build -t sesamcommunity/ntlm-adapter .;
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push sesamcommunity/ntlm-adapter:latest;
     fi
