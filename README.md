@@ -17,7 +17,7 @@ A small microservice to get data from NTLM source.
       "username": "DOMAIN\\username",
       "password": "thePassword"
     },
-    "image": "sesambuild/ntlm-adapter:latest",
+    "image": "sesamcommunity/ntlm-adapter:latest",
     "port": 5001
   }
 }
